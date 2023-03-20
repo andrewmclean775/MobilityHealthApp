@@ -8,10 +8,12 @@ A collection view cell that displays a chart.
 import UIKit
 import CareKitUI
 
-class DataTypeCollectionViewCell: UICollectionViewCell {
+class RangeTypeDataViewCell: UICollectionViewCell {
         
     var dataTypeIdentifier: String!
-    var statisticalValues: [Double] = []
+    var statisticalValues: [TrackingData] = []
+    
+    var variant: DateRangeVariant!
     
     var chartView: OCKCartesianChartView = {
         let chartView = OCKCartesianChartView(type: .bar)
@@ -63,9 +65,10 @@ class DataTypeCollectionViewCell: UICollectionViewCell {
         return [leading, top, trailing, bottom]
     }
     
-    func updateChartView(with dataTypeIdentifier: String, values: [Double], title: String = createChartDateRangeLabel()) {
+    func updateChartView(with dataTypeIdentifier: String, values: [TrackingData], title: String = createChartDateRangeLabel(), variant: DateRangeVariant) {
         self.dataTypeIdentifier = dataTypeIdentifier
         self.statisticalValues = values
+        self.variant = variant
         
         // Update headerView
         chartView.headerView.titleLabel.text = getDataTypeName(for: dataTypeIdentifier) ?? "Data"
@@ -73,10 +76,10 @@ class DataTypeCollectionViewCell: UICollectionViewCell {
         
         // Update graphView
         chartView.applyDefaultConfiguration()
-        chartView.graphView.horizontalAxisMarkers = createHorizontalAxisMarkers()
+        chartView.graphView.horizontalAxisMarkers = createHorizontalAxisMarkers(values: values, variant: variant)
         
         // Update graphView dataSeries
-        let dataPoints: [CGFloat] = statisticalValues.map { CGFloat($0) }
+        let dataPoints: [CGFloat] = statisticalValues.map { CGFloat($0.value) }
         
         guard
             let unit = preferredUnit(for: dataTypeIdentifier),
