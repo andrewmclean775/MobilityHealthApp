@@ -8,6 +8,8 @@ A collection of utility functions used for general HealthKit purposes.
 import Foundation
 import HealthKit
 
+let WalkinsSpeedUnit = HKUnit.init(from: "m/s")
+
 // MARK: Sample Type Identifier Support
 
 /// Return an HKSampleType based on the input identifier that corresponds to an HKQuantityTypeIdentifier, HKCategoryTypeIdentifier
@@ -55,6 +57,8 @@ private func preferredUnit(for identifier: String, sampleType: HKSampleType? = n
             unit = .count()
         case .distanceWalkingRunning, .sixMinuteWalkTestDistance:
             unit = .meter()
+        case .walkingSpeed:
+            unit = WalkinsSpeedUnit
         default:
             break
         }
@@ -91,6 +95,47 @@ func createLastWeekPredicate(from endDate: Date = Date()) -> NSPredicate {
     return HKQuery.predicateForSamples(withStart: startDate, end: endDate)
 }
 
+/// This is commonly used for date intervals so that we get the last seven days worth of data,
+/// because we assume today (`Date()`) is providing data as well.
+func getStartDate(from date: Date = Date(), variant type: DateRangeVariant = .DAILY(7)) -> Date {
+    switch type {
+    case .DAILY(let value):
+        return Calendar.current.startOfDay(for: Calendar.current.date(byAdding: .day, value: value > 0 ? -(value - 1) : -6, to: date)!)
+    case .WEEKLY(let value):
+        let weekDay = Calendar.current.component(.weekday, from: date)
+        let weekStartDate = Calendar.current.startOfDay(for:Calendar.current.date(byAdding: .day, value: -(weekDay - 1), to: date)!)
+        return Calendar.current.startOfDay(for: Calendar.current.date(byAdding: .weekOfYear, value: value > 1 ? -(value - 1) : -5, to: weekStartDate)!)
+    case .MONTHLY(let value):
+        let month = Calendar.current.component(.month, from: date)
+        let year = Calendar.current.component(.year, from: date)
+        let firstOfMonth = Calendar.current.date(from: DateComponents(year: year, month: month, day: 1))
+        let monthStartDate = Calendar.current.startOfDay(for:firstOfMonth!)
+        return Calendar.current.startOfDay(for: Calendar.current.date(byAdding: .month, value: value > 0 ? -(value - 1) : -11, to: monthStartDate)!)
+    case .YEARLY(let value):
+        let year = Calendar.current.component(.year, from: date)
+        let firstOfYear = Calendar.current.date(from: DateComponents(year: year, month: 1, day: 1))
+        let yearStartDate = Calendar.current.startOfDay(for:firstOfYear!)
+        return Calendar.current.startOfDay(for: Calendar.current.date(byAdding: .year, value: value > 0 ? -(value - 1) : -4, to: yearStartDate)!)
+    }
+}
+
+typealias PredicateDate = (predicate: NSPredicate, date: DateComponents)
+
+func createPredicate(from endDate: Date = Date(), variant type: DateRangeVariant = .DAILY(7)) -> PredicateDate {
+    let startDate = getStartDate(from: endDate, variant: type)
+    switch type {
+    case .DAILY:
+        return (HKQuery.predicateForSamples(withStart: startDate, end: endDate), DateComponents(day: 1))
+    case .WEEKLY:
+        return (HKQuery.predicateForSamples(withStart: startDate, end: endDate), DateComponents(day: 7))
+    case .MONTHLY:
+        return (HKQuery.predicateForSamples(withStart: startDate, end: endDate), DateComponents(month: 1))
+    case .YEARLY:
+        return (HKQuery.predicateForSamples(withStart: startDate, end: endDate), DateComponents(year: 1))
+    }
+    
+}
+
 /// Return the most preferred `HKStatisticsOptions` for a data type identifier. Defaults to `.discreteAverage`.
 func getStatisticsOptions(for dataTypeIdentifier: String) -> HKStatisticsOptions {
     var options: HKStatisticsOptions = .discreteAverage
@@ -102,7 +147,7 @@ func getStatisticsOptions(for dataTypeIdentifier: String) -> HKStatisticsOptions
         switch quantityTypeIdentifier {
         case .stepCount, .distanceWalkingRunning:
             options = .cumulativeSum
-        case .sixMinuteWalkTestDistance:
+        case .sixMinuteWalkTestDistance, .walkingSpeed:
             options = .discreteAverage
         default:
             break

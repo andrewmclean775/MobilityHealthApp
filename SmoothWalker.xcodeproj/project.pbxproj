@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14A0C55E29C457FA00A22D5F /* MobilityWalkingSpeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A0C55D29C457FA00A22D5F /* MobilityWalkingSpeedController.swift */; };
+		14F7C37929C5E7DF007AE388 /* RangeBasedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7C37829C5E7DF007AE388 /* RangeBasedViewController.swift */; };
+		14F7C37B29C841FE007AE388 /* RangeTypeDataViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7C37A29C841FE007AE388 /* RangeTypeDataViewCell.swift */; };
+		14F7C38329C88D89007AE388 /* SmoothWalkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7C38229C88D89007AE388 /* SmoothWalkerTests.swift */; };
 		EB12722B24859C1600548CD1 /* DataTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB12722A24859C1600548CD1 /* DataTypeTableViewCell.swift */; };
 		EB12722D2485BA9400548CD1 /* HealthDataTypeValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB12722C2485BA9400548CD1 /* HealthDataTypeValue.swift */; };
 		EB12722F2485C83E00548CD1 /* EmptyDataBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB12722E2485C83E00548CD1 /* EmptyDataBackgroundView.swift */; };
@@ -40,8 +44,23 @@
 		F9907B09245894E600987667 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9907B08245894E600987667 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		14F7C38429C88D89007AE388 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9907AE72458947B00987667 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9907AEE2458947C00987667;
+			remoteInfo = SmoothWalker;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		8037822B27C5C24067AC1EBF /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		14A0C55D29C457FA00A22D5F /* MobilityWalkingSpeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobilityWalkingSpeedController.swift; sourceTree = "<group>"; };
+		14F7C37829C5E7DF007AE388 /* RangeBasedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeBasedViewController.swift; sourceTree = "<group>"; };
+		14F7C37A29C841FE007AE388 /* RangeTypeDataViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeTypeDataViewCell.swift; sourceTree = "<group>"; };
+		14F7C38029C88D89007AE388 /* SmoothWalkerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmoothWalkerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14F7C38229C88D89007AE388 /* SmoothWalkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothWalkerTests.swift; sourceTree = "<group>"; };
+		8037822B27C5C24067AC1EBF /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		DDC3EAD6D9404AADDCC92FF8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EB12722A24859C1600548CD1 /* DataTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypeTableViewCell.swift; sourceTree = "<group>"; };
 		EB12722C2485BA9400548CD1 /* HealthDataTypeValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataTypeValue.swift; sourceTree = "<group>"; };
@@ -67,7 +86,7 @@
 		EB9525BF2474C9C2001B5178 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		EB9525C12475BD41001B5178 /* HealthKitSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSupport.swift; sourceTree = "<group>"; };
 		EBEF213B2462289B0055F482 /* FeedItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemCollectionViewCell.swift; sourceTree = "<group>"; };
-		F06C5C28897D1C25EF30CF88 /* ACKNOWLEDGMENTS.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = ACKNOWLEDGMENTS.txt; sourceTree = "<group>"; };
+		F06C5C28897D1C25EF30CF88 /* ACKNOWLEDGMENTS.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = ACKNOWLEDGMENTS.txt; sourceTree = "<group>"; };
 		F9907AEF2458947C00987667 /* SmoothWalker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmoothWalker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9907AF22458947C00987667 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9907AF42458947C00987667 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,10 +96,17 @@
 		F9907B002458947D00987667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9907B06245894E600987667 /* SmoothWalker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmoothWalker.entitlements; sourceTree = "<group>"; };
 		F9907B08245894E600987667 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		FEDEA0134A58BE9A54B6DBA4 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		FEDEA0134A58BE9A54B6DBA4 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		14F7C37D29C88D89007AE388 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F9907AEC2458947C00987667 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -93,13 +119,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14F7C38129C88D89007AE388 /* SmoothWalkerTests */ = {
+			isa = PBXGroup;
+			children = (
+				14F7C38229C88D89007AE388 /* SmoothWalkerTests.swift */,
+			);
+			path = SmoothWalkerTests;
+			sourceTree = "<group>";
+		};
 		58678013FC22E92E1995728A /* LICENSE */ = {
 			isa = PBXGroup;
 			children = (
 				FEDEA0134A58BE9A54B6DBA4 /* LICENSE.txt */,
 				F06C5C28897D1C25EF30CF88 /* ACKNOWLEDGMENTS.txt */,
 			);
-			name = LICENSE;
 			path = LICENSE;
 			sourceTree = "<group>";
 		};
@@ -133,6 +166,7 @@
 		EB1B0CA42486CEA100724782 /* Collection View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				14F7C37829C5E7DF007AE388 /* RangeBasedViewController.swift */,
 				F9907AF62458947C00987667 /* FeedItemViewController.swift */,
 			);
 			path = "Collection View Controllers";
@@ -188,6 +222,7 @@
 		EB48C1BE246B25D000AE8FE3 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				14A0C55D29C457FA00A22D5F /* MobilityWalkingSpeedController.swift */,
 				EB9525BF2474C9C2001B5178 /* WelcomeViewController.swift */,
 				EB9525B62474C396001B5178 /* WeeklyDataTableViewController.swift */,
 				EB644F9E24730E2B00CF27F0 /* MobilityChartDataViewController.swift */,
@@ -200,6 +235,7 @@
 		EB48C1BF246B25DA00AE8FE3 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				14F7C37A29C841FE007AE388 /* RangeTypeDataViewCell.swift */,
 				EB12722A24859C1600548CD1 /* DataTypeTableViewCell.swift */,
 				EBEF213B2462289B0055F482 /* FeedItemCollectionViewCell.swift */,
 			);
@@ -234,6 +270,7 @@
 			children = (
 				DDC3EAD6D9404AADDCC92FF8 /* README.md */,
 				F9907AF12458947C00987667 /* SmoothWalker */,
+				14F7C38129C88D89007AE388 /* SmoothWalkerTests */,
 				F9907AF02458947C00987667 /* Products */,
 				F9907B07245894E600987667 /* Frameworks */,
 				A84DF625EC23E377183A6CF9 /* Configuration */,
@@ -245,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				F9907AEF2458947C00987667 /* SmoothWalker.app */,
+				14F7C38029C88D89007AE388 /* SmoothWalkerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -277,6 +315,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		14F7C37F29C88D89007AE388 /* SmoothWalkerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14F7C38829C88D89007AE388 /* Build configuration list for PBXNativeTarget "SmoothWalkerTests" */;
+			buildPhases = (
+				14F7C37C29C88D89007AE388 /* Sources */,
+				14F7C37D29C88D89007AE388 /* Frameworks */,
+				14F7C37E29C88D89007AE388 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14F7C38529C88D89007AE388 /* PBXTargetDependency */,
+			);
+			name = SmoothWalkerTests;
+			productName = SmoothWalkerTests;
+			productReference = 14F7C38029C88D89007AE388 /* SmoothWalkerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F9907AEE2458947C00987667 /* SmoothWalker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9907B032458947D00987667 /* Build configuration list for PBXNativeTarget "SmoothWalker" */;
@@ -303,10 +359,15 @@
 		F9907AE72458947B00987667 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
+				DefaultBuildSystemTypeForWorkspace = Latest;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = Apple;
 				TargetAttributes = {
+					14F7C37F29C88D89007AE388 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = F9907AEE2458947C00987667;
+					};
 					F9907AEE2458947C00987667 = {
 						CreatedOnToolsVersion = 12.0;
 					};
@@ -329,11 +390,19 @@
 			projectRoot = "";
 			targets = (
 				F9907AEE2458947C00987667 /* SmoothWalker */,
+				14F7C37F29C88D89007AE388 /* SmoothWalkerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		14F7C37E29C88D89007AE388 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F9907AED2458947C00987667 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -348,10 +417,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		14F7C37C29C88D89007AE388 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14F7C38329C88D89007AE388 /* SmoothWalkerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F9907AEB2458947C00987667 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F7C37929C5E7DF007AE388 /* RangeBasedViewController.swift in Sources */,
 				EB12722D2485BA9400548CD1 /* HealthDataTypeValue.swift in Sources */,
 				F9907AF72458947C00987667 /* FeedItemViewController.swift in Sources */,
 				EB9525BE2474C9A2001B5178 /* SplashScreenViewController.swift in Sources */,
@@ -360,6 +438,7 @@
 				EB12722F2485C83E00548CD1 /* EmptyDataBackgroundView.swift in Sources */,
 				EB9525B52474C282001B5178 /* HealthDataTableViewController.swift in Sources */,
 				EB305B7C2485D99B007A7694 /* HealthQueryTableViewController.swift in Sources */,
+				14A0C55E29C457FA00A22D5F /* MobilityWalkingSpeedController.swift in Sources */,
 				EB305B7E2485E4B8007A7694 /* HealthKitSupport+Strings.swift in Sources */,
 				EB644FA32473136500CF27F0 /* ServerResponse.swift in Sources */,
 				EB326B50246B1B5700FEFD08 /* HealthData.swift in Sources */,
@@ -375,12 +454,21 @@
 				EB48C1CA246B3A0300AE8FE3 /* ChartViewStyle.swift in Sources */,
 				EB48C1C4246B351C00AE8FE3 /* CareKitSupport.swift in Sources */,
 				EB644F9F24730E2B00CF27F0 /* MobilityChartDataViewController.swift in Sources */,
+				14F7C37B29C841FE007AE388 /* RangeTypeDataViewCell.swift in Sources */,
 				EB9525C02474C9C2001B5178 /* WelcomeViewController.swift in Sources */,
 				EB12722B24859C1600548CD1 /* DataTypeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14F7C38529C88D89007AE388 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9907AEE2458947C00987667 /* SmoothWalker */;
+			targetProxy = 14F7C38429C88D89007AE388 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EB1B0CAC2486D7A700724782 /* Localizable.stringsdict */ = {
@@ -402,6 +490,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		14F7C38629C88D89007AE388 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MV4854X3FA;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ktsolutions.SmoothWalkerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmoothWalker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SmoothWalker";
+			};
+			name = Debug;
+		};
+		14F7C38729C88D89007AE388 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MV4854X3FA;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ktsolutions.SmoothWalkerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmoothWalker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SmoothWalker";
+			};
+			name = Release;
+		};
 		F9907B012458947D00987667 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8037822B27C5C24067AC1EBF /* SampleCode.xcconfig */;
@@ -527,7 +655,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "SmoothWalker/Supporting Files/SmoothWalker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MV4854X3FA;
 				INFOPLIST_FILE = "SmoothWalker/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -550,7 +678,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "SmoothWalker/Supporting Files/SmoothWalker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MV4854X3FA;
 				INFOPLIST_FILE = "SmoothWalker/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -569,6 +697,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		14F7C38829C88D89007AE388 /* Build configuration list for PBXNativeTarget "SmoothWalkerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14F7C38629C88D89007AE388 /* Debug */,
+				14F7C38729C88D89007AE388 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F9907AEA2458947B00987667 /* Build configuration list for PBXProject "SmoothWalker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
